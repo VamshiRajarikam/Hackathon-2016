@@ -1,0 +1,160 @@
+
+<html>
+<head>
+    <title>Registration form</title>
+<script type="text/javascript">
+function validateregister()
+    
+{
+        
+if(document.myform.name.value==""||!myform.name.value.match(/^[A-Za-z]+$/))
+        
+{
+            
+alert("please enter alphabets only..");
+            
+document.myform.name.focus();
+            
+return false;
+        
+}
+        
+if(document.myform.username.value=="")
+        
+{
+           
+ alert("please provide the correct username");
+           
+ document.myform.username.focus();
+            
+return false;
+        
+}
+    
+if(document.myform.password.value==""||document.myform.password.value.length<6)
+{
+alert("password too weak");
+document.myform.password.focus();
+return false;
+}
+if(document.myform.emailid.value=="" ||document.myform.emailid.value=="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*.\w+(\.\w{2,3})+$/")
+    
+{
+       
+ alert(" please enter a appropriate email");
+        
+document.myform.emailid.focus();
+        
+return false;
+   
+ }
+        
+if(document.myform.phonenumber.value==""||document.myform.phonenumber.value.length!=10)
+{
+alert("please provide valid no. ##########");
+document.myform.phonenumber.focus();
+return false;
+}             
+ if(document.myform.sex.value==""||!myform.sex.value.match(/^[A-Za-z]+$/))
+        
+ {
+             
+alert("please enter your gender in alphabets");
+ document.myform.sex.focus();            
+return false;
+         
+}
+        
+
+    
+if(document.myform.organisation.value=="" ||!myform.organisation.value.match(/^[A-Za-z]+$/))
+    
+{
+       
+ alert(" plase enter only alphabets");
+       
+ document.myform.organisation.focus();
+        
+return false;
+    
+}
+    
+if(document.myform.category.value=="" ||!myform.category.value.match(/^[A-Za-z]+$/))
+    
+{
+        
+alert(" plase enter only alphabets");
+       
+ document.myform.category.focus();
+        
+return false;
+   
+ }
+ if(document.myform.address.value=="")
+ {
+ alert("please give you'r address");
+ document.myform.address.focus();
+ return false;
+ }
+   
+ }
+
+
+</script>
+    <link rel="stylesheet" href="pure-min.css"/>
+	    <link rel="stylesheet" href="link.css"/>
+        <header>
+            <div id="container">
+
+<div id="header" style="background-color:lightgreen;float:center">
+<h1 style="margin-bottom:0;">WEB BASED REWARD POINTS MANAGEMENT SYSTEM</h1>
+            <div class="pure-menu pure-menu-open pure-menu-horizontal">
+     <a href="#" class="pure-menu-heading"><c>Infotech</c></a>
+    <ul id="std-menu-items">
+        <li><a href="Home.html">Home</a></li>
+        <li class="pure-menu-selected"><a href="About us.html">About us</a></li>
+		<li><a href="Login.html">Login</a></li>
+        <li><a href=" Admin Login.html"> Admin Login</a></li>
+        <li><a href="Registration.html">Register</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+		</ul>
+  </div> </div></div>     </header>
+    </head>
+    <body>
+        
+            <center>   
+ <form name="myform" class="pure-form pure-form-stacked" action="reg.php" method="post"  onsubmit="return validateregister();">
+     
+     <font color="white"><center><u> Registration Form</u> </center><font>
+	 
+   <p>
+     <input type="text" name="name" placeholder="Name" maxlength="20"><br>
+     
+<input type="text" name="username" placeholder="Username" maxlength="20"><br>
+     
+<input type="password" name="password" placeholder="Password" maxlength="10"><br>
+     
+<input type="email" name="emailid" placeholder="Emailid" maxlength="30"><br>
+     
+<input type="text" name="phonenumber" placeholder="Phonenumber" maxlength="10"><br>
+  <input type="text" name="sex" placeholder="Sex" maxlength="10"><br>   
+   
+     
+<input type="text" name="organisation" placeholder="Organisation" maxlength="20"><br>
+     
+<input type="text" name="category" placeholder="Category" maxlength="20"><br>
+     
+<p>Address:</p><textarea name="address" rows="12" columns="25" maxlength="300"></textarea><br>
+
+    <button type="submit" class="pure-button pure-button-primary">submit</button>
+   
+ <button type="reset" class="pure-button pure-button-primary">reset</button>
+
+    </p>
+</form>
+        </center>
+        
+    </body>
+	
+	
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>Login form</title>
+<script type="text/javascript">
+    function validatelogin()
+    {
+     if(document.myform.username.value=="")
+    {
+    alert("please enter the correct username..!");
+    document.myform.username.focus();
+    return false;
+    }
+    if(document.myform.password.value==""||document.myform.password.value.length<6)
+    {
+    alert(" entred password is too weak please enter again..");
+    document.myform.password.focus();
+    return false;
+    }
+    }
+        
+      
+    </script>
+    <link rel="stylesheet" href="pure-min.css"/>
+    <link rel="stylesheet" href="link.css"/>
+        <header>
+		<div id="container">
+		<div id="header" style="background-color:lightgreen;float:center">
+<h1 style="margin-bottom:0;">WEB BASED REWARD POINTS MANAGEMENT SYSTEM</h1>
+            <div class="pure-menu pure-menu-open pure-menu-horizontal">
+     <a href="#" class="pure-menu-heading"><c>Infotech</c></a>
+    <ul id="std-menu-items">
+        <li><a href="Home.html" target="_self">Home</a></li>
+        <li class="pure-menu-selected"><a href="About us.html">About us</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Admin Login.html"> Admin Login</a></li>
+        <li><a href="Registration.html">Register</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        </ul>
+  </div>   </div> </div>
+  </header>
+    </head>
+    <body>
+    
+        <form name="myform" class="pure-form pure-form-stacked" action="ulog.php" method="post" onsubmit="return validatelogin();">
+            <center>   
+ 
+    
+       <u> <pre> <font color="white"><center>Login Page </center></font></pre></u>
+
+     
+        <input name="username" type="text" placeholder="Username" maxlength="25"><br>
+     
+
+
+        <input name="password" type="password" placeholder="Password" maxlength="10"><br>
+
+
+        <label for="remember" class="pure-checkbox">
+          <font color="white"><center>  <input name="remember" type="checkbox"> Remember me<br></center></font>
+        </label>
+
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+		
+		<button type="reset" class="pure-button pure-button-primary">Reset</button><br>
+     
+     <a href="Forgotpassword.html">Forgot password</a>
+    
+</form>
+                </center>
+        </form></body>
+		<center>
+        <footer style="position:absolute;bottom:0;width:100%;"><p>Hackathon 2016</p></footer>
+    </center>
+    </html>
+    
